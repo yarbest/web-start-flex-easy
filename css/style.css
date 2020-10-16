@@ -35,6 +35,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin: 100px 0 125px 0;
+  text-align: center;
 }
 
 .tools__title h1 {
