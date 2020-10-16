@@ -1,0 +1,159 @@
+
+$color-blue: #23bac1
+$background-color-tools: #f9f9f9
+
+@font-face 
+    font-family: 'Proxima Nova'
+    src: url('../../fonts/ProximaNova-Regular.ttf')
+
+
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+body
+    font-family: 'Proxima Nova', sans-serif
+
+.container
+    max-width: 1140px
+    margin: 0 auto
+
+.tools
+    border: 1px solid transparent
+    background-color: $background-color-tools
+    // border: 1px solid red
+    &__body
+        // border: 1px solid #000
+    &__title
+        display: flex
+        justify-content: center
+        align-items: center
+        margin: 100px 0 125px 0 
+        
+        h1
+            font-size: 36px
+            font-weight: 400
+            margin: 0
+    
+    &__content
+        display: grid
+        grid-template-rows: 1fr
+        grid-template-columns: minmax(auto, 23%) minmax(auto, 23%) minmax(auto, 23%) minmax(auto, 23%)
+        justify-content: space-between
+        grid-row-gap: 30px
+        // border: 1px solid #000
+    &__item
+        flex-basis: 23%
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: center
+        text-align: center
+        box-shadow: 0px 0px 21px -16px rgba(0, 0, 0, 0.74)
+        // border: 1px solid blue
+
+        .item-image
+            height: 210px
+            width: 100%
+            display: flex
+            justify-content: center
+            align-items: center
+            background-color: #ffffff
+            // border: 1px solid green
+        
+            img    
+                display: block
+                max-width: 100%
+                max-height: 100%
+                // border: 1px solid #000
+        .item-text
+            display: flex
+            flex-direction: column
+            .item-info
+                margin: 27px 0 22px 0
+                font-size: 16px
+                font-weight: 300
+                // border: 1px solid #000
+
+            .item-price
+                margin-bottom: 25px
+                font-size: 18px
+                font-weight: 700
+                // border: 1px solid #000
+        .item-button
+            button
+                padding: 23px 75px
+                font-size: 13px
+                font-weight: 700
+                color: $color-blue
+                border: 1px solid $color-blue
+
+
+
+
+
+@media (max-width: 1199px)
+
+    .container
+        max-width: 100%
+        padding: 0 20px
+
+@media (max-width: 991px)
+
+    .tools
+        &__title
+            margin: 60px 0 80px 0 
+            h1
+                font-size: 36px
+                font-weight: 400
+                margin: 0
+
+        &__content  
+            grid-template-rows: 1fr 1fr
+            // grid-template-columns: minmax(auto, 43%) minmax(auto, 43%) minmax(auto, 43%)
+            grid-template-columns: repeat(3, 1fr)
+            grid-row-gap: 20px
+            grid-column-gap: 20px
+
+        &__item
+            .item-image
+                img
+                    max-width: 100%
+            .item-text
+                .item-info
+                    margin: 15px 0 15px 0
+                    font-size: 16px
+                .item-price
+                    margin-bottom: 15px
+                    font-size: 18px
+            .item-button
+                button
+                    padding: 15px 75px
+                    font-size: 16px
+
+@media (max-width: 767px)
+    .tools
+        &__title
+            margin: 40px 0 60px 0 
+            h1
+                font-size: 28px
+                font-weight: 400
+                margin: 0
+
+        &__content  
+            grid-template-rows: 1fr 1fr
+            grid-template-columns: repeat(2, 1fr)
+       
+@media (max-width: 480px)
+    .tools
+        &__title
+            margin: 30px 0 40px 0 
+            h1
+                font-size: 28px
+                font-weight: 400
+                margin: 0
+
+        &__content  
+            grid-template-rows: 1fr 1fr 1fr
+            grid-template-columns: repeat(1, 1fr)
